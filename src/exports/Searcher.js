@@ -112,7 +112,7 @@ class Searcher {
 			li.addEventListener("click", () => {
 				this.container.innerHTML = "";
 				(async () => {
-					await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${li.dataset.city}&units=metric&appid=67304d7d1f587faeb69efa2619a1e0c7&lang=fr`).then((response) => {
+					await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${li.dataset.city}&units=metric&appid=<TOKEN>&lang=fr`).then((response) => {
 						if (response.status >= 400 && response.status < 600) {
 							throw new Error("Bad response from server");
 						}
@@ -146,7 +146,7 @@ class Searcher {
 		var marker = L.marker([li.dataset.lat, li.dataset.lon]).addTo(map);
 		marker.bindPopup(`<strong>Météo pour : ${json.name}</strong><br>${json.main.temp}°C`).openPopup();
 		L.tileLayer(
-			'https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token=pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpejY4NXVycTA2emYycXBndHRqcmZ3N3gifQ.rJcFIG214AriISLbB6B5aw', {
+			'https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token=<TOKEN>', {
 				maxZoom: 18,
 				attribution: 'Moi - Mabule',
 				id: 'mapbox/streets-v11',
