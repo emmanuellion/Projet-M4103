@@ -1,0 +1,63 @@
+/* @font-face{
+    font-family: 'Optima';
+    src: url('./OPTIMA.TTF') format('truetype');
+    font-style: normal;
+}*/
+
+body{
+    min-height: 100vh;
+}
+
+#map { height: 100vh;}
+
+#info, #end{
+    position: absolute;
+    width: auto;
+    height: 30px;
+    z-index: 2147483647;
+}
+
+#info{
+    bottom: 1%;
+    left: 1%;
+}
+
+#end{
+    top: 1%;
+    right: 1%;
+
+    &:hover{cursor: pointer;}
+}
+
+
+#author{
+    position: absolute;
+    bottom: 5%;
+    left: 2%;
+    transform: translate(-50%);
+    width: auto;
+    font-weight: 900;
+}
+
+.u, .d{
+    display: flex;
+    flex-direction: column;
+
+    span{text-align: center;}
+}
+
+.u{color: #A7A9AB;}
+
+.d{
+    padding: 2px;
+    background-color: #A7A9AB;
+    color: #292B2F;
+    border-radius: 5px;
+}
+
+#logo{
+    position: absolute;
+    bottom: 5%;
+    right: 5%;
+    width: 10%;
+}

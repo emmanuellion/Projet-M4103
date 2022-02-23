@@ -1,0 +1,29 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial';
+}
+
+body{
+    min-height: 100vh;
+    background-color: #292B2F;
+}
+
+.center{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+}
+
+.line{
+    background-color:#2F3136;
+    color:#A7A9AB;
+    border-radius: 5px;
+    margin-top: 5px;
+    padding: 5px 10px;
+}
